@@ -1,0 +1,6 @@
+argparse
+numpy
+scipy
+tensorflow
+tensorflow_hub
+git+https://github.com/irgendwr/audio2numpy
