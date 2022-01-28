@@ -115,7 +115,7 @@ def pitch(metaData, lyrics, modelOutput):
 
 	for line in metaData:
 		if line[0:4] == "#BPM":
-			bpm = float(line[5:])
+			bpm = float(line[5:].replace(",", "."))
 		if line[0:4] == "#GAP":
 			gap = float(line[5:])
 
