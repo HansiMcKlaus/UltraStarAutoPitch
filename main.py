@@ -29,12 +29,15 @@ def initArgs():
 						help="Name or path of the karaoke file")
 	parser.add_argument("audiofile", type=str,
 						help="Name or path of the audio file")
-	parser.add_argument("-c", "--confidence", type=float, default=0.85,
-						help="How confident the model has to be. Default: 0.85")
+	parser.add_argument("-c", "--confidence", type=float, default=0.65,
+						help="How confident the model has to be. Default: 0.65")
 	parser.add_argument("-gpu", "--gpu", action='store_true', default=False,
 						help="Use GPU instead of CPU. Default: False")
 
 	args = parser.parse_args()
+
+	if args.confidence >= 1 or args.confidence <= 0:
+		exit("Confidence must be a value between 0 and 1.")
 
 	return args
 

@@ -41,6 +41,6 @@ If SPICE couldn't confidently detect a pitch for a given syllable, it defaults b
 
 ## Flags
 
-`-c, --confidence` How confident the model has to be. Default: 0.85
+`-c, --confidence` How confident the model has to be. Default: 0.65
 
 `-gpu, --gpu` Use GPU instead of CPU. Default: False
